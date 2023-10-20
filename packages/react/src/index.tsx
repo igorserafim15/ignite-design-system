@@ -1,5 +1,11 @@
-import { colors } from '@ignite-ui/tokens'
+import '../src/globals.css'
 
-export function App() {
-  return <h1 style={{ color: colors.ignite300 }}>Hello World</h1>
+import { ReactNode } from 'react'
+
+type ButtonProps = { children: ReactNode }
+
+export function Button({ children }: ButtonProps) {
+  return (
+    <button className="px-3 py-2 bg-ignite-500 rounded-lg">{children}</button>
+  )
 }
